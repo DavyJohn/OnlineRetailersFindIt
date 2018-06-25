@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="110dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/linear_background">
+        <ImageView
+            android:id="@+id/image_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/cart_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
+
+            <ImageView
+                android:id="@+id/tv_item_shopcart_clothselect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:src="@drawable/shopcart_selected" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:id="@+id/shop_image"
+            android:src="@mipmap/ic_launcher" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:id="@+id/cart_shop_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="博世不锈钢钻头"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/cart_shop_title"
+                android:layout_alignStart="@+id/cart_shop_title"
+                android:layout_below="@+id/cart_shop_title"
+                android:layout_marginTop="10dp"
+                android:text="HSS-Co,1.0mmx12mm" />
+
+            <TextView
+                android:id="@+id/unit_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="￥11.20"
+                android:textColor="@color/red_light" />
+
+            <com.zzh.findit.widget.SnappingStepper
+                android:id="@+id/snapping"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbar_bg"
+        android:id="@+id/sort_tool">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:focusable="true"
+                android:layout_marginRight="18dp"
+                android:focusableInTouchMode="true"
+                android:background="@drawable/main_searchview_shape">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_searchview_icon"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:cursorVisible="true"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14sp"
+                    android:id="@+id/sort_search_view"
+                    android:imeOptions="actionSearch"
+                    android:layout_centerVertical="true"
+                    android:hint="请输入订单号、型号、品牌"
+                    android:paddingLeft="35dp"/>
+            </RelativeLayout>
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/sort_message"
+                android:visibility="gone"
+                android:src="@drawable/ic_main_message_icon"/>
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/decoration_color"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/sort_recycler"
+            android:background="@color/boot_view"/>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/sort_content_recycler"
+            android:background="@color/white"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:gravity="center"
+    android:padding="5dp">
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:scaleType="fitXY"
+        android:padding="1dp"
+        android:id="@+id/main_rt_image"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="name"
+        android:layout_gravity="left"
+        android:textColor="@color/black"
+        android:id="@+id/main_rt_name"
+        android:maxLines="1"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="left"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_rt_price"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_rt_zan"
+            android:src="@drawable/shoucang"/>
+    </LinearLayout>
+</LinearLayout>

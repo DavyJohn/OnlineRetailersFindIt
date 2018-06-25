@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">智造库</string>
+    <string name="filepath">com.zzh.findit.fileProvider</string>
+    <string name="filter_vcode">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+</resources>

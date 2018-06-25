@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="line_color">#E6E6E6</color>
+    <color name="black">#000</color>
+    <color name="red_light">#F94651</color>
+    <color name="toolbar_bg">#fff</color>
+    <color name="white">#fff</color>
+    <color name="dots_select">#FF9908</color>
+    <color name="transparent">#00000000</color>
+    <color name="main_bottom_unsel_color">#93969B</color>
+    <color name="main_bottom_sel_color">#FF9908</color>
+    <color name="boot_view">#F1F1F1</color>
+
+// 加减控件
+    <color name="cl_snappingstepper_button_normal">#237bb6</color>
+    <color name="cl_snappingstepper_button_press">#1f567b</color>
+    <color name="cl_snappingstepper_text_bg">#2b8ccd</color>
+    <color name="cl_snappingstepper_text">#000000</color>
+    //分类分割线
+    <color name="decoration_color">#CDCDCD</color>
+    <color name="ites_tips_color">#666666</color>
+
+    <color name="actionsheet_gray">#8F8F8F</color>
+    <color name="alertdialog_line">#c6c6c6</color>
+    <color name="actionsheet_blue">#037BFF</color>
+    <color name="actionsheet_red">#FD4A2E</color>
+</resources>

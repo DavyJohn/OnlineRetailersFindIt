@@ -1,0 +1,131 @@
+apply plugin: 'com.android.application'
+apply plugin: "com.mob.sdk"
+android {
+    signingConfigs {
+        release {
+            keyAlias 'find'
+            keyPassword '111111'
+            storeFile file('E:/Android/find/app/findandroid.jks')
+            storePassword '111111'
+        }
+    }
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "com.zzh.findit"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 19
+        versionName "1.0.18"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+    }
+    buildTypes {
+        debug {
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+//            signingConfig signingConfigs.release
+        }
+
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            //混淆
+            minifyEnabled false
+            //Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources false
+            //指定签名为release
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+MobSDK {
+    //客户
+    appKey "245779a47de21"
+    appSecret "e8b3973024504739a1fd84ed8bac64e6"
+
+    ShareSDK {
+        //平台配置信息
+        devInfo {
+            Wechat {
+                id 1
+                sortId 1
+                appId "wx40dfaa9229a0381d"
+                appSecret "7d682598662ad9956e93a593636f4318"
+                shareByAppClient true
+//                bypassApproval true
+            }
+
+            QQ {
+                id 2
+                sortId 2
+                appId "1106682232"
+                appKey "dShRfKcS0XiAV162"
+                shareByAppClient  true
+            }
+            WechatMoments {
+                id 3
+                sortId 3
+                appId "wx40dfaa9229a0381d"
+                appSecret "7d682598662ad9956e93a593636f4318"
+//                bypassApproval true
+            }
+            QZone{
+                id 4
+                sortId 4
+                appId "1106682232"
+                appKey "dShRfKcS0XiAV162"
+                shareByAppClient true
+            }
+        }
+    }
+
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    //需要混肴
+    compile 'com.zhy:okhttputils:2.6.2'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'com.lsjwzh:materialloadingprogressbar:0.5.8-RELEASE'
+    compile 'com.pnikosis:materialish-progress:1.7'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    //裁剪
+    compile 'com.soundcloud.android:android-crop:1.0.1@aar'
+    compile 'com.android.support:design:26.0.0-alpha1'
+    //消息远点
+    compile 'q.rorbin:badgeview:1.1.2'
+    compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
+    compile 'com.squareup.picasso:picasso:2.3.2'
+    compile 'com.android.support:cardview-v7:26.0.0-alpha1'
+    //cookie chijiuhua
+    compile 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
+    //加载框架
+    compile 'com.github.zzz40500:android-shapeLoadingView:1.0.3.2'
+    implementation files('libs/alipaySdk-20170922.jar')
+    implementation files('libs/tbs_sdk_thirdapp_v3.5.0.1004_43500_sharewithdownload_withoutGame_obfs_20170801_113025.jar')
+    compile 'com.tencent.bugly:crashreport:latest.release' //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+    compile 'com.tencent.bugly:nativecrashreport:latest.release'
+//    //标准
+    compile 'com.baidu.mobstat:mtj-sdk:latest.integration'
+//    //可视化
+//    compile 'com.baidu.mobstat:mtj-sdk-circle:latest.integration'
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_icon"
+        android:title="首页"
+        android:enabled="true"/>
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/ic_sort_icon"
+        android:title="分类"
+        android:enabled="true"/>
+
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/ic_cart_icon"
+        android:title="购物车"
+        android:enabled="true"/>
+    <item
+        android:id="@+id/navigation_mine"
+        android:icon="@drawable/ic_mine_icon"
+        android:title="我的"
+        android:enabled="true"/>
+
+</menu>
